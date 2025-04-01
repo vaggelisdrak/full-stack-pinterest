@@ -1,6 +1,7 @@
 import React from 'react'
 import "./userButton.css"
 import { useState } from 'react'
+import Image from '../image/Image'
 
 const UserButton = () => {
     const [open, setOpen] = useState(false)
@@ -9,7 +10,7 @@ const UserButton = () => {
 
     return currentUser ? (
         <div className='userButton'>
-            <img src='/general/noAvatar.png' alt='user'/>
+            <Image path='/general/noAvatar.png' alt='user'/>
             <img 
                 src='/general/arrow.svg' 
                 alt='arrow' 

@@ -10,11 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.71.1",
+    "axios": "^1.8.4",
     "emoji-picker-react": "^4.12.2",
     "imagekitio-react": "^4.3.0",
     "react": "^19.0.0",
+    "react-colorful": "^5.6.1",
     "react-dom": "^19.0.0",
-    "react-router": "^7.4.1"
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-router": "^7.4.1",
+    "timeago": "^1.6.7",
+    "timeago.js": "^4.0.2",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

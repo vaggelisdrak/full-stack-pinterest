@@ -1,8 +1,8 @@
-import Pin from "../models/pin.model.js";
-import User from "../models/user.model.js";
-import Like from "../models/like.model.js";
-import Save from "../models/save.model.js";
-import Board from "../models/board.model.js";
+import Pin from "../models/pinModel.js";
+import User from "../models/userModel.js";
+import Like from "../models/likeModel.js";
+import Save from "../models/saveModel.js";
+import Board from "../models/boardModel.js";
 import sharp from "sharp";
 import Imagekit from "imagekit";
 import jwt from "jsonwebtoken";
@@ -32,8 +32,6 @@ export const getPins = async (req, res) => {
     .skip(pageNumber * LIMIT);
 
   const hasNextPage = pins.length === LIMIT;
-
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
 
   res
     .status(200)

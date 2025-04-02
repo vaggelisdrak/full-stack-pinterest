@@ -1,6 +1,6 @@
-import Image from "../image/Image";
 import "./galleryItem.css";
 import { Link } from "react-router";
+import Image from "../image/Image";
 
 const GalleryItem = ({ item }) => {
 
@@ -11,8 +11,9 @@ const optimizedHeight = (372 * item.height) / item.width
       className="galleryItem"
       style={{ gridRowEnd: `span ${Math.ceil(item.height / 100)}` }}
     >
+      {/* <img src={item.media} alt="" /> */}
       <Image path={item.media} alt="" w={372} h={optimizedHeight}/>
-      <Link to={`/pin/${item._id}`} className="overlay" />
+      <Link to={`/pin/${item._id}`} className="overlay" >
       <button className="saveButton">Save</button>
       <div className="overlayIcons">
         <button>
@@ -22,6 +23,7 @@ const optimizedHeight = (372 * item.height) / item.width
           <Image path="/general/more.svg" alt="" />
         </button>
       </div>
+      </Link>
     </div>
   );
 };

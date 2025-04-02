@@ -1,5 +1,5 @@
-import Board from "../models/board.model.js";
-import Pin from "../models/pin.model.js";
+import Board from "../models/boardModel.js";
+import Pin from "../models/pinModel.js";
 
 export const getUserBoards = async (req, res) => {
   const { userId } = req.params;
@@ -19,5 +19,6 @@ export const getUserBoards = async (req, res) => {
     })
   );
 
+  console.log(boardsWithPinDetails);
   res.status(200).json(boardsWithPinDetails);
 };

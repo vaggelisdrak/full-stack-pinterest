@@ -1,5 +1,5 @@
-import User from "../models/user.model.js";
-import Follow from "../models/follow.model.js";
+import User from "../models/userModel.js";
+import Follow from "../models/followModel.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
@@ -81,6 +81,7 @@ export const getUser = async (req, res) => {
   const followingCount = await Follow.countDocuments({ follower: user._id });
 
   const token = req.cookies.token;
+  console.log(token);
 
   if (!token) {
     res.status(200).json({
